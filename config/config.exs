@@ -35,5 +35,6 @@ config :coherence,
   router: UserAuthWeb.Router,
   messages_backend: UserAuthWeb.Coherence.Messages,
   logged_out_url: "/",
-  opts: [:authenticatable]
+  opts: [:authenticatable],
+  user_token: true
 # %% End Coherence Configuration %%
