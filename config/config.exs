@@ -25,3 +25,16 @@ config :logger, :console,
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"
+
+# %% Coherence Configuration %%   Don't remove this line
+config :coherence,
+  user_schema: UserAuth.Coherence.User,
+  repo: UserAuth.Repo,
+  module: UserAuth,
+  web_module: UserAuthWeb,
+  router: UserAuthWeb.Router,
+  messages_backend: UserAuthWeb.Coherence.Messages,
+  logged_out_url: "/",
+  opts: [:authenticatable],
+  user_token: true
+# %% End Coherence Configuration %%
