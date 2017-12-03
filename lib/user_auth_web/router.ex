@@ -22,6 +22,8 @@ defmodule UserAuthWeb.Router do
 
   pipeline :api do
     plug :accepts, ["json"]
+
+    plug Coherence.Authentication.Token
   end
 
 
